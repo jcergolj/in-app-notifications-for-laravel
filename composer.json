@@ -1,0 +1,31 @@
+{
+    "name": "jcergolj/in-app-notifications-for-laravel",
+    "description": "Simple package for setting and displaying in-app notifications for Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Janez Cergolj",
+            "email": "me@jcergolj.me.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Jcergolj\\InAppNotifications\\": "src/"
+        }
+    },
+    "scripts": {
+        "pint": "vendor/bin/pint"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.9"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jcergolj\\InAppNotifications\\InAppNotificationsServiceProvider"
+            ]
+        }
+    }
+}
