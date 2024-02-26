@@ -77,3 +77,19 @@ public function register(): void
     });
 }
 ```
+
+## It has use Illuminate\Support\Traits\Macroable;
+If you wish so you can extend `InAppNotitication` class utilising Macroable trait.
+
+```php
+// AppServiceProvider.php
+
+InAppNotitication::macro('customMethod', function () {
+
+});
+
+// e.g. inside controller
+
+InAppNotitication::customMethod();
+
+```
