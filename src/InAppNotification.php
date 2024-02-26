@@ -2,7 +2,7 @@
 
 namespace Jcergolj\InAppNotifications;
 
-use  Illuminate\Support\Traits\Macroable;
+use Illuminate\Support\Traits\Macroable;
 
 class InAppNotification
 {
