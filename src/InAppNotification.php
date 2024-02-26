@@ -74,4 +74,9 @@ class InAppNotification
     {
         return $this->timeout;
     }
+
+    public function fake(): void
+    {
+        InAppNotification::mixin(new InAppNotificationTestMacro());
+    }
 }

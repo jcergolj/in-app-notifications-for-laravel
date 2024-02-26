@@ -1,6 +1,6 @@
 # In-App Notifications for Laravel - Elegant & Customizable Alerts
 
-<img src="images/screenshot.png" alt="Package for displaying in app notifications for Laravel" height="100px">
+<img src="images/screenshot.png" alt="Package for displaying in app notifications for Laravel">
 
 ## Key features
 - notification is closed automatically after 5s,
@@ -90,6 +90,31 @@ InAppNotitication::macro('customMethod', function () {
 
 // e.g. inside controller
 
-InAppNotitication::customMethod();
+InAppNotification::customMethod();
 
+```
+
+## Testing
+Package comes with few handy assertions:
+
+```php
+// add this for adding testable macro
+InAppNotification::fake();
+
+InAppNotification::assertSet()
+InAppNotification::assertSet('Assert against this text.');
+
+InAppNotification::assertSuccess()
+InAppNotification::assertSuccess('Success');
+
+InAppNotification::assertError();
+InAppNotification::assertError('Error');
+
+InAppNotification::assertInfo();
+InAppNotification::assertInfo('Info');
+
+InAppNotification::assertWarning();
+InAppNotification::assertWarning('Warning');
+
+InAppNotification::assertTimeout(10000);
 ```
