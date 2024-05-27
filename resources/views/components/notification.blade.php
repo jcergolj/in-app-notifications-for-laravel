@@ -20,5 +20,5 @@
                 document.getElementById('flash').style.display = 'none';
             }, {{ InAppNotification::timeout() }});
         </script>
-    @section
+    @endsection
 @endif
