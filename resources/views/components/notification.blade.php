@@ -17,7 +17,10 @@
     @section('scripts')
         <script>
             setTimeout(() => {
-                document.getElementById('flash').style.display = 'none';
+                var flash = document.getElementById('flash');
+                    if (flash) {
+                        flash.style.display = 'none';
+                    }
             }, {{ InAppNotification::timeout() }});
         </script>
     @endsection
