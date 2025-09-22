@@ -29,8 +29,6 @@ php artisan vendor:publish --provider="Jcergolj\InAppNotifications\InAppNotifica
 ### Add components to your layouts/app.blade.php file
 ```html
     <x-in-app-notifications::notification />
-
-    @yield('scripts')
 ```
 
 ### Set notification inside controller

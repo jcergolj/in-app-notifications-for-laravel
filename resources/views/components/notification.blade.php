@@ -7,6 +7,7 @@
             'bg-yellow-500/90 border-yellow-500/90' => InAppNotification::isWarning(),
             'bg-blue-500/90 border-blue-500/90' => InAppNotification::isInfo(),
         ])
+        style="opacity:1;"
         role="alert"
     >
         <span class="font-medium">
@@ -14,14 +15,13 @@
         </span>
     </div>
 
-    @section('scripts')
-        <script>
-            setTimeout(() => {
-                var flash = document.getElementById('flash');
-                    if (flash) {
-                        flash.style.display = 'none';
-                    }
-            }, {{ InAppNotification::timeout() }});
-        </script>
-    @endsection
+    <script>
+        setTimeout(() => {
+            const flash = document.getElementById('flash');
+            if(flash){
+                flash.style.opacity = '0';
+                setTimeout(() => flash.remove(), 500);
+            }
+        }, {{ InAppNotification::timeout() }});
+    </script>
 @endif
